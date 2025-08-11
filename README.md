@@ -55,5 +55,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 11. used url as a source of truth using url params
 12. added code splitting- allowing lazily loading of home component while the app url has not url parameters yet, with help of Suspense and Fallback
 13. e2e testing - used playwright to test,
+
     > a. if a user can search a character, view character's details, and add a note about the character successfully
+
     > b. if a user can toggle favorite status and UI updates accordingly
