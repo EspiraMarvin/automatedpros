@@ -42,6 +42,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 # Decisions
 
+> used rick & morty api
+
 1. used the nextjs app/src structure
 2. react query
 3. added searching of characters, including favorite characters
