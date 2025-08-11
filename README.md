@@ -5,6 +5,16 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+# setup
+
+# install deps
+npm install --legacy-peer-deps
+
+# if it fails run
+npm install --legacy-peer-deps
+```
+
+```bash
 npm run dev
 # or
 yarn dev
@@ -17,34 +27,33 @@ bun dev
 tests
 
 ```bash
+# run e2e test
 npm run e2e
 
-
-// interactive tests
+# interactive tests
 npx playwright test --headed
 
-// for debugging step by step control
+# for debugging step by step control
 npx playwright test --debug
 
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Decisions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. used the nextjs app/src structure
+2. react query
+3. added searching of characters, including favorite characters
+4. added filters - for character status (ALIVE, DEAD and UNKNOWN)
+5. added sorting - for character names (both asc and desc order)
+6. added toggle a character to favorite or not, and listing favorite character when show favorites button is clicked
+7. add pagination for the fetched data
+8. added loading skeletons and errors (retry button)
+9. added Form on the detail page with validation to add a note on a character
+10. added Cancelling in‑flight requests when inputs change using AbortController.
+11. used url as a source of truth using url params
+12. added code splitting- allowing lazily loading of home component while the app url has not url parameters yet, with help of Suspense and Fallback
+13. e2e testing - used playwright to test,
+    > a. if a user can search a character, view character's details, and add a note about the character successfully
+    > b. if a user can toggle favorite status and UI updates accordingly
