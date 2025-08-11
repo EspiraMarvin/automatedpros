@@ -14,6 +14,20 @@ pnpm dev
 bun dev
 ```
 
+tests
+
+```bash
+npm run e2e
+
+
+// interactive tests
+npx playwright test --headed
+
+// for debugging step by step control
+npx playwright test --debug
+
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
