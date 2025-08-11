@@ -59,3 +59,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
     > a. if a user can search a character, view character's details, and add a note about the character successfully
 
     > b. if a user can toggle favorite status and UI updates accordingly
+
+14. added cicd to continuous integration and deploying to vercel after a successful e2e test and buid steps
