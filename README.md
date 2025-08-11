@@ -8,7 +8,7 @@ First, run the development server:
 # setup
 
 # install deps
-npm install --legacy-peer-deps
+npm install
 
 # if it fails run
 npm install --legacy-peer-deps
